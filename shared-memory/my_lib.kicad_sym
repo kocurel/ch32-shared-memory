@@ -7,15 +7,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at -11.43 6.096 0)
+			(at -9.144 9.144 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" ""
-			(at 0 0 0)
+		(property "Value" "23LCV1024"
+			(at -5.588 6.096 0)
 			(effects
 				(font
 					(size 1.27 1.27)
