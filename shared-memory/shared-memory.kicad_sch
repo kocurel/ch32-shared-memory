@@ -8,7 +8,7 @@
 		(title "ch32-shared-memory - SPI Shared Memory Hardware")
 		(date "2026-05-30")
 		(company "Emilia Koziol (kocurel.dev)")
-		(comment 1 "Licensed under CERN-OHL-S v2 or later. See LICENSE.hardware for details.")
+		(comment 1 "Licensed under CERN-OHL-P. See LICENSE.hardware for details.")
 	)
 	(lib_symbols
 		(symbol "74xx:74LVC125"
