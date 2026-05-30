@@ -1,3 +1,19 @@
+# For ch32fun github.com/cnlohr/ch32fun
+.pio
+.vscode
+.idea
+*.elf
+*.hex
+*.lst
+*.bin
+*.map
+minichlink/minichlink
+minichlink/minichlink.so
+compile_commands.json
+.cache
+ch32fun/generated_*.ld
+**/.DS_Store
+
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
 

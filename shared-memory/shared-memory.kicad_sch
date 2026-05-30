@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "51510f93-bbbe-446f-949a-63bc64e75434")
 	(paper "A4")
+	(title_block
+		(title "ch32-shared-memory - SPI Shared Memory Hardware")
+		(date "2026-05-30")
+		(company "Emilia Koziol (kocurel.dev)")
+		(comment 1 "Licensed under CERN-OHL-S v2 or later. See LICENSE.hardware for details.")
+	)
 	(lib_symbols
 		(symbol "74xx:74LVC125"
 			(pin_names
@@ -1889,6 +1895,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 49.53) (xy 35.56 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5950b4b8-7fd8-4399-b934-d6a76d839394")
+	)
+	(wire
+		(pts
 			(xy 261.62 52.07) (xy 261.62 59.69)
 		)
 		(stroke
@@ -1906,6 +1922,16 @@
 			(type default)
 		)
 		(uuid "5be15b29-eaa0-406e-9176-607d55288304")
+	)
+	(wire
+		(pts
+			(xy 25.4 107.95) (xy 36.83 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d0d5178-905a-4ad0-b223-4272e9f9111c")
 	)
 	(wire
 		(pts
@@ -1989,16 +2015,6 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 110.49) (xy 36.83 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94c32aa8-03a6-4e68-a9dd-e21404cf7fb8")
-	)
-	(wire
-		(pts
 			(xy 179.07 29.21) (xy 189.23 29.21)
 		)
 		(stroke
@@ -2036,6 +2052,16 @@
 			(type default)
 		)
 		(uuid "a8813902-7bea-4fc9-90fd-c785406caa18")
+	)
+	(wire
+		(pts
+			(xy 25.4 110.49) (xy 36.83 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aacffaed-cf89-4c98-b6a1-63068ed7178c")
 	)
 	(wire
 		(pts
@@ -2497,6 +2523,16 @@
 		)
 		(uuid "8b43c4ac-5283-415d-bb9d-964fc36e17ec")
 	)
+	(label "~{BUSREQ}"
+		(at 24.13 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8c66f1cf-a41c-4c44-bc1d-c7bf39b3a529")
+	)
 	(label "M1_MISO"
 		(at 24.13 64.77 0)
 		(effects
@@ -2587,6 +2623,16 @@
 		)
 		(uuid "cad843f1-1863-49b2-a4be-b7937632f1ce")
 	)
+	(label "~{BUSACK}"
+		(at 25.4 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cf236b09-7e86-4ce2-8078-3ffb310626ed")
+	)
 	(label "~{M2_BUS_EN}"
 		(at 25.4 113.03 0)
 		(effects
@@ -2638,7 +2684,7 @@
 		(uuid "f2a3bc42-9f82-45f3-bb9c-908070843417")
 	)
 	(label "~{BUSREQ}"
-		(at 25.4 110.49 0)
+		(at 25.4 107.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
