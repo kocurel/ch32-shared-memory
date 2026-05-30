@@ -23,5 +23,5 @@ jobs:
 
     - name: Build firmware with Make
       run: |
-        cd source
+        cd firmware_ch32
         make main.bin
