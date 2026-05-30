@@ -19,7 +19,7 @@ jobs:
     - name: Install RISC-V Toolchain via APT
       run: |
         sudo apt-get update
-        sudo apt-get install -y gcc-riscv64-unknown-elf libnewlib-dev
+        sudo apt-get install -y gcc-riscv64-unknown-elf libnewlib-dev libusb-1.0-0-dev libudev-dev
 
     - name: Build firmware with Make
       run: |
