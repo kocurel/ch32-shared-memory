@@ -1,12 +1,13 @@
 //    ch32-shared-memory - A minimal implementation of a shared memory on an SPI
-//    bus 
+//    bus
 //    Copyright (C) 2026 Emilia Koziol
 
 #include "ch32fun.h"
 
-int main() {
-  SystemInit();
+int main()
+{
+    SystemInit();
 
-  while (1) {
-  }
+    while (1) {
+    }
 }
