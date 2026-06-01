@@ -9,7 +9,7 @@
 #define BUS_GRANT_PIN 2
 
 #define GPIO_CFG_CLR_MASK(pin)      (0xF << ((pin) * 4))
-#define GPIO_CFG_SET_MASK(pin, cfg) ((cfg )<< ((pin) * 4))
+#define GPIO_CFG_SET_MASK(pin, cfg) ((cfg)<< ((pin) * 4))
 
 #define M1
 // #define M2
