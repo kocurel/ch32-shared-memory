@@ -13,14 +13,12 @@
 
 void request_bus(void)
 {
-    // Enable negative edge
-    EXTI->FTENR |= (1U << BUS_GRANT_PIN);
-
     // Clear interrupt flag (by setting 1)
     EXTI->INTFR = (1U << BUS_GRANT_PIN);
 
     // Enable the interrupt line
     EXTI->INTENR |= (1U << BUS_GRANT_PIN);
+    EXTI->FTENR |= (1U << BUS_GRANT_PIN);
 
     // Request by pulling BUSREQ low
     GPIOC->OUTDR &= ~(1U << BUSREQ_PIN);
@@ -30,7 +28,6 @@ void EXTI7_0_IRQHandler(void) __attribute__((interrupt));
 void EXTI7_0_IRQHandler(void)
 {
     if (EXTI->INTFR & (1U << BUS_GRANT_PIN)) {
-
         // Clear interrupt flag
         EXTI->INTFR = (1U << BUS_GRANT_PIN);
 
@@ -38,7 +35,7 @@ void EXTI7_0_IRQHandler(void)
         EXTI->INTENR &= ~(1U << BUS_GRANT_PIN);
 
         // Execute transfer here
-        Delay_Us(800);
+        Delay_Ms(50);
 
         // Signal bus return
         GPIOC->OUTDR |= (1U << BUSREQ_PIN);
