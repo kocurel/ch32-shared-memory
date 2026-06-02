@@ -11,9 +11,6 @@
 #define GPIO_CFG_CLR_MASK(pin)      (0xF << ((pin) * 4))
 #define GPIO_CFG_SET_MASK(pin, cfg) ((cfg)<< ((pin) * 4))
 
-#define M1
-// #define M2
-
 int main()
 {
     SystemInit();
@@ -23,19 +20,10 @@ int main()
 
     GPIOC->CFGLR &= ~(GPIO_CFG_CLR_MASK(BUSREQ_PIN) | GPIO_CFG_CLR_MASK(BUS_GRANT_PIN));
 
-#ifdef M1
 
     GPIOC->CFGLR |= GPIO_CFG_SET_MASK(BUSREQ_PIN, GPIO_CFGLR_IN_FLOAT);
     GPIOC->CFGLR |= GPIO_CFG_SET_MASK(BUS_GRANT_PIN, GPIO_CFGLR_OUT_10Mhz_OD);
 
-#endif
-
-#ifdef M2
-
-    GPIOC->CFGLR |= GPIO_CFG_SET_MASK(BUSREQ_PIN, GPIO_CFGLR_OUT_10Mhz_OD);
-    GPIOC->CFGLR |= GPIO_CFG_SET_MASK(BUS_GRANT_PIN, GPIO_CFGLR_IN_FLOAT);
-
-#endif
     while (1) {
     }
 }

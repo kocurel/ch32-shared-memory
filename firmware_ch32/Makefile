@@ -1,10 +1,23 @@
-all : flash
+CONTROLLER_DIR := controller
+WORKER_DIR := worker
 
-TARGET:=main
+.PHONY: all controller worker flash_controller clean
 
-TARGET_MCU?=CH32V003
-include ../lib/ch32fun/ch32fun/ch32fun.mk
+all : controller worker
 
-flash : cv_flash
-clean : cv_clean
+controller:
+	@echo "Building Controller"
+	$(MAKE) -C $(CONTROLLER_DIR)
+worker:
+	@echo "Building Worker"
+	$(MAKE) -C $(WORKER_DIR)
 
+flash_controller:
+	$(MAKE) -C $(CONTROLLER_DIR) flash
+
+flash_worker:
+	$(MAKE) -C $(WORKER_DIR) flash
+
+clean:
+	$(MAKE) -C $(CONTROLLER_DIR) clean
+	$(MAKE) -C $(WORKER_DIR) clean
